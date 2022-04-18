@@ -15,10 +15,10 @@ function openLink(link) {
 };
 
 
+const bookmarkArray = [];
+
 function checkBookmark() {
-    let bookmark = document.getElementsByClassName("Bookmark")[0];
-    let bookmarkButton = document.getElementBy 
-    const bookmarkArray = bookmark.getAttribute("bookmarked");
+    const bookmark = document.getElementsByClassName("Bookmark")[0];
     const currentPage = document.getElementById("currentPage").innerHTML;
     const indexToRemove = bookmarkArray.indexOf(currentPage);
     if (indexToRemove > -1) {
