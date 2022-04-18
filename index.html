@@ -9,11 +9,22 @@
     <body>
         <div class="MainRoot">
             <div class="MainBar">
-                <div class="MainButton">
-                    <h1 id="mainName">&nbsp;&nbsp;KindaOP&nbsp;&nbsp;</h1>
+                <div class="MainButton" onclick="toggleSidebar()">
+                    <h1 id="mainName"><i>&nbsp;&nbsp;KindaOP&nbsp;&nbsp;</i></h1>
+                </div>
+                <div class="MainSidebar" active="false">
+                    <div class="LinkButton" id="cv" onclick="openLink('https://drive.google.com/file/d/1ZabxzrXQ3IUv1UteyLAN6ZGoWCecUxE2/view?usp=sharing')">
+                        <h1>CV</h1>
+                    </div>
+                    <div class="LinkButton" id="transcript" onclick="openLink('https://drive.google.com/file/d/1NmhST6JnA1-1HLipBZA_ONKqIsuhiUyf/view?usp=sharing')">
+                        <h1>Transcript</h1>
+                    </div>
+                    <div class="LinkButton" id="github" onclick="openLink('https://github.com/KindaOP')">
+                        <h1>Github</h1>
+                    </div>
                 </div>
                 <h1 id="currentPage">Home</h1>
-                <div class="Bookmark"></div>
+                <div class="Bookmark" bookmarked="[]"></div>
             </div>
             <div class="MainHeader">
                 <div class="Background"></div>
@@ -21,13 +32,35 @@
             <div class="MainBody">
                 <div class="Profile">
                     <div id="image"></div>
-                    <div id="text"></div>
+                    <div id="text">
+                        <h2 id="name">Thanapong Sommart</h2>
+                        <p id="program">Electrical Engineering: Communication Engineering</p>
+                        <p id="institute">Sirindhorn International Institute of Technology (SIIT)</p>
+                    </div>
                 </div>
-                <div class="BookMarkButton"></div>
+                <div class="BookmarkButton" onclick="checkBookmark()">
+                    <h1>Add to bookmark</h1>
+                </div>
             </div>
             <div class="MainFooter">
-                <h3 key="topic">Related Institutions</h3>
-                <div class="Institutions"></div>
+                <h3 id="topic">Related Institutions</h3>
+                <div class="Institutions">
+                    <a href='https://www.kvis.ac.th/' target='_blank' rel='noreferrer'>
+                        <img class="Image" id="kvis" src='./asset/kvis.png' alt="unavailable" />
+                    </a>
+                    <a href='https://www.siit.tu.ac.th/' target='_blank' rel='noreferrer'>
+                        <img class="Image" id="siit" src='./asset/siit.png' alt="unavailable" />
+                    </a>
+                    <a href='https://www.nectec.or.th/' target='_blank' rel='noreferrer'>
+                        <img class="Image" id="nectec" src='./asset/nectec.png' alt="unavailable" />
+                    </a>
+                    <a href='https://www.vistec.ac.th/' target='_blank' rel='noreferrer'>
+                        <img class="Image" id="vistec" src='./asset/vistec.png' alt="unavailable" />
+                    </a>
+                    <a href='https://superai.aiat.or.th/' target='_blank' rel='noreferrer'>
+                        <img class="Image" id="superai" src='./asset/superai.png' alt="unavailable" />
+                    </a>
+                </div>
             </div>
         </div>
     </body>

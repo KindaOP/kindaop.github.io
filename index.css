@@ -11,6 +11,27 @@ body {
     padding: 0;
 }
 
+.LinkButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+    background-color: var(--color04);
+    
+    text-align: center;
+    font-size: 8px;
+    color: var(--color05);
+
+    opacity: 0.75;
+    transition-duration: 0.25s;
+}
+
+.LinkButton:hover {
+    opacity: 1;
+    transition-duration: 0.25s;
+}
+
 .MainRoot {
     display: flex;
     flex-direction: column;
@@ -74,6 +95,48 @@ body {
     transition-duration: 0.25s;
 }
 
+.MainSidebar {
+    position: fixed;
+    top: 10vh;
+    min-height: 10vh;
+    width: 12vw;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 2;
+    
+    background-color: transparent;
+    
+    text-align: center;
+    font-size: 12px;
+    color: var(--color05);
+}
+
+.MainSidebar[active="true"] {
+    left: 0vw;
+
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.MainSidebar[active="false"] {
+    left: -15vw;
+    
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+.MainSidebar .LinkButton {
+    min-height: 6vh;
+    width: 12vw;
+
+    border: 2px solid var(--color03);
+}
+
 .MainHeader {
     position: relative;
     height: 70vh;
@@ -81,11 +144,27 @@ body {
     
     display: flex;
     flex-direction: column;
-    z-index: 0;
+    z-index: -1;
     
     background-color: var(--color05);
     
     color: var(--color05);
+}
+
+.Background {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    
+    background-image: url('./asset/warpy.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
 }
 
 .MainBody {
@@ -104,6 +183,83 @@ body {
     color: var(--color05);
 }
 
+.Profile {
+    position: absolute;
+    left: 2vw;
+    top: -20vh;
+    height: 40vh;
+    width: 60vw;
+
+    z-index: 1;
+    
+    background-color: transparent;
+    
+    color: var(--color01);
+}
+
+.Profile #image {
+    position: absolute;
+    top: 0vh;
+    left: 0vh;
+    height: 40vh;
+    width: 40vh;
+    
+    z-index: 1;
+    
+    background-image: url('./asset/profile.jpg');
+    background-position: center;
+    border-radius: 50%;
+    border: 2px solid;
+    
+    line-height: 40vh;    
+    text-align: center;
+    color: var(--color01);
+}
+
+.Profile #text {
+    position: absolute;
+    left: 40vh;
+    bottom: 0vh;
+    height: 50%;
+    width: calc(100vw - 40vh);
+
+    z-index: 1;
+    
+    background-color: transparent;
+    
+    text-align: left;
+    padding-left: 2vw;
+    color: var(--color05);
+}
+
+.Profile #text #name {
+    max-width: 20vw;
+}
+
+.BookmarkButton {
+    position: absolute;
+    top: 4vh;
+    right: 6vh;
+    height: 6vh;
+    width: 30vw;
+    
+    z-index: 2;
+    
+    background-color: var(--color04);
+    
+    text-align: center;
+    font-size: 8px;
+    color: var(--color01);
+
+    opacity: 0.75;
+    transition-duration: 0.25s;
+}
+
+.BookmarkButton:hover {
+    opacity: 1;
+    transition-duration: 0.25s;
+}
+
 .MainFooter {
     position: relative;
     height: 40vh;
@@ -115,7 +271,7 @@ body {
     background-color: var(--color03);
 }
 
-.MainFooter#topic {
+.MainFooter #topic {
     position: absolute;
     top: 2vh;
     left: 2vw;
