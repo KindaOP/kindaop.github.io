@@ -33,14 +33,14 @@ body {
     transition-duration: 0.25s;
 }
 
-.MainRoot {
+#MainRoot {
     display: flex;
     flex-direction: column;
     z-index: 0;
     overflow-x: hidden;
 }
 
-.MainBar {
+#MainBar {
     position: fixed;
     top: 0vh;
     left: 0vw;
@@ -56,12 +56,13 @@ body {
     color: var(--color05);
 }
 
-.MainButton {
+#MainBar #MainButton {
     position: inherit;
-    top: 2vh;
-    left: 2vh;
+    top: 0;
+    left: 0;
     height: 4vh;
     min-width: 12vw;
+    margin: 2vh;
     
     display: flex;
     flex-direction: row;
@@ -81,22 +82,34 @@ body {
     transition-duration: 0.25s;
 }
 
-.MainButton::before {
-    content: '<-';
-    font-size: 2em;
-}
-
-.MainButton::after {
-    content: '->';
-    font-size: 2em;
-}
-
-.MainButton:hover {
+#MainBar #MainButton:hover {
     opacity: 1;
     transition-duration: 0.25s;
 }
 
-.MainSidebar {
+#MainBar #MainContacts {
+    position: inherit;
+    top: 0;
+    right: 0;
+    height: 8vh;
+    min-width: 12vw;
+    margin: 1vh;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 0;
+    
+    opacity: 0.75;
+}
+
+#MainBar #MainContacts .Image {
+    padding: 1vh;
+    width: 5vh;
+}
+
+#MainBar .Sidebar {
     position: fixed;
     top: 10vh;
     min-height: 10vh;
@@ -115,7 +128,7 @@ body {
     color: var(--color05);
 }
 
-.MainSidebar[active="true"] {
+#MainBar .Sidebar[active="true"] {
     left: 0vw;
 
     transition-property: left;
@@ -123,7 +136,7 @@ body {
     transition-timing-function: ease-out;
 }
 
-.MainSidebar[active="false"] {
+#MainBar .Sidebar[active="false"] {
     left: -15vw;
     
     transition-property: left;
@@ -131,14 +144,14 @@ body {
     transition-timing-function: ease-in;
 }
 
-.MainSidebar .LinkButton {
+#MainBar .Sidebar .LinkButton {
     min-height: 6vh;
     width: 12vw;
 
     border: 2px solid var(--color03);
 }
 
-.MainHeader {
+#MainHeader {
     position: relative;
     height: 70vh;
     width: 100vw;
@@ -168,7 +181,7 @@ body {
     opacity: 1;
 }
 
-.MainBody {
+#MainBody {
     position: relative;
     height: 35vh;
     width: 100vw;
@@ -184,9 +197,9 @@ body {
     color: var(--color05);
 }
 
-.Profile {
+#MainProfile {
     position: absolute;
-    left: 2vw;
+    left: 5vw;
     top: -20vh;
     height: 40vh;
     width: 60vw;
@@ -198,7 +211,7 @@ body {
     color: var(--color01);
 }
 
-.Profile #image {
+#MainProfile #image {
     position: absolute;
     top: 0vh;
     left: 0vh;
@@ -217,53 +230,28 @@ body {
     color: var(--color01);
 }
 
-.Profile #text {
+#MainProfile #text {
     position: absolute;
     left: 40vh;
     bottom: 0vh;
     height: 50%;
-    width: calc(100vw - 40vh);
-
     z-index: 1;
     
     background-color: transparent;
     
     text-align: left;
-    padding-left: 2vw;
+    padding-left: 5vw;
     color: var(--color05);
 }
 
-.Profile #text #name {
-    max-width: 20vw;
+#MainProfile #text #name {
+    font-size: 40px;
+    max-width: 60vw;
 }
 
-.BookmarkButton {
-    position: absolute;
-    top: 4vh;
-    right: 6vh;
-    height: 6vh;
-    width: 30vw;
-    
-    z-index: 2;
-    
-    background-color: var(--color04);
-    
-    text-align: center;
-    font-size: 8px;
-    color: var(--color01);
-
-    opacity: 0.75;
-    transition-duration: 0.25s;
-}
-
-.BookmarkButton:hover {
-    opacity: 1;
-    transition-duration: 0.25s;
-}
-
-.MainFooter {
+#MainFooter {
     position: relative;
-    height: 40vh;
+    height: 70vh;
     
     display: flex;
     flex-direction: column;
@@ -272,10 +260,10 @@ body {
     background-color: var(--color03);
 }
 
-.MainFooter #topic {
+#MainFooter #topic {
     position: absolute;
     top: 2vh;
-    left: 2vw;
+    left: 4vw;
     height: 5vh;
     width: 40vw;
 
@@ -286,29 +274,24 @@ body {
     background-color: transparent;
     
     text-align: left;
-    font-size: 16px;
     color: var(--color04);
 }
 
-.Institutions {
-    position: absolute;
-    top: 10vh;
+#MainCalendar {
+    position: inherit;
+    top: 15vh;
     left: 5vw;
-    height: 25vh;
-    width: 90vw;
-    
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    z-index: 0;
-    
-    opacity: 0.75;
+    height: 70%;
+    width: 90%;
+}
+
+#MainCalendar iframe {
+    width: 100%;
+    height: 100%;   
 }
 
 .Image {
     height: auto;
-    width: 15vw;
 
     opacity: 0.75;
 

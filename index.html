@@ -3,16 +3,17 @@
     <head>
         <meta charset='utf-8' />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="asset/kindaop_icon.png">
         <link rel='stylesheet' href='./index.css'>
         <title>KindaOP</title>
     </head>
     <body>
-        <div class="MainRoot">
-            <div class="MainBar">
-                <div class="MainButton" onclick="toggleSidebar()">
+        <div id="MainRoot">
+            <div id="MainBar">
+                <div id="MainButton" onclick="toggleSidebar()">
                     <h1 id="mainName"><i>&nbsp;&nbsp;KindaOP&nbsp;&nbsp;</i></h1>
                 </div>
-                <div class="MainSidebar" active="false">
+                <div class="Sidebar" active="false">
                     <div class="LinkButton" id="cv" onclick="openLink('https://drive.google.com/file/d/1ZabxzrXQ3IUv1UteyLAN6ZGoWCecUxE2/view?usp=sharing')">
                         <h1>CV</h1>
                     </div>
@@ -24,42 +25,34 @@
                     </div>
                 </div>
                 <h1 id="currentPage">Home</h1>
-                <div class="Bookmark" bookmarked="[]"></div>
+                <div id="MainContacts">
+                    <a href='https://scholar.google.com/citations?user=h0xAk1gAAAAJ&hl=en&oi=ao' target='_blank' rel='noreferrer'>
+                        <img class="Image" id="scholar" src='./asset/google_scholar_icon.png' alt="unavailable" />
+                    </a>
+                    <a href='https://www.linkedin.com/in/thanapong-sommart-5874a5263' target='_blank' rel='noreferrer'>
+                        <img class="Image" id="linkedin" src='./asset/linkedin_icon.png' alt="unavailable" />
+                    </a>
+                    <a href='https://github.com/KindaOP' target='_blank' rel='noreferrer'>
+                        <img class="Image" id="github" src='./asset/github_icon.png' alt="unavailable" />
+                    </a>
+                </div>
             </div>
-            <div class="MainHeader">
+            <div id="MainHeader">
                 <div class="Background"></div>
             </div>
-            <div class="MainBody">
-                <div class="Profile">
+            <div id="MainBody">
+                <div id="MainProfile">
                     <div id="image"></div>
                     <div id="text">
-                        <h2 id="name">Thanapong Sommart</h2>
-                        <p id="program">Electrical Engineering: Communication Engineering</p>
-                        <p id="institute">Sirindhorn International Institute of Technology (SIIT)</p>
+                        <h1 id="name">Thanapong Sommart</h1>
+                        <h2 id="email">thanapong.net[at]gmail.com</h2>
                     </div>
                 </div>
-                <div class="BookmarkButton" onclick="checkBookmark()">
-                    <h1>Add to bookmark [BETA]</h1>
-                </div>
             </div>
-            <div class="MainFooter">
-                <h3 id="topic">Related Institutions</h3>
-                <div class="Institutions">
-                    <a href='https://www.kvis.ac.th/' target='_blank' rel='noreferrer'>
-                        <img class="Image" id="kvis" src='./asset/kvis.png' alt="unavailable" />
-                    </a>
-                    <a href='https://www.siit.tu.ac.th/' target='_blank' rel='noreferrer'>
-                        <img class="Image" id="siit" src='./asset/siit.png' alt="unavailable" />
-                    </a>
-                    <a href='https://www.nectec.or.th/' target='_blank' rel='noreferrer'>
-                        <img class="Image" id="nectec" src='./asset/nectec.png' alt="unavailable" />
-                    </a>
-                    <a href='https://www.vistec.ac.th/' target='_blank' rel='noreferrer'>
-                        <img class="Image" id="vistec" src='./asset/vistec.png' alt="unavailable" />
-                    </a>
-                    <a href='https://superai.aiat.or.th/' target='_blank' rel='noreferrer'>
-                        <img class="Image" id="superai" src='./asset/superai.png' alt="unavailable" />
-                    </a>
+            <div id="MainFooter">
+                <h2 id="topic">Calendar</h2>
+                <div id="MainCalendar">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=thanapong.net%40gmail.com&ctz=Asia%2FTokyo"></iframe>
                 </div>
             </div>
         </div>
