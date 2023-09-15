@@ -285,10 +285,10 @@ body {
     width: 90%;
 }
 
-#MainCalendar iframe {
+/* #MainCalendar iframe {
     width: 100%;
     height: 100%;   
-}
+} */
 
 .Image {
     height: auto;
